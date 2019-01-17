@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Jonathan Ely.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
@@ -28,3 +28,39 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+import math
+
+window = rg.TurtleWindow()
+window.delay(1)
+
+circle = rg.SimpleTurtle()
+circle.speed = 500000
+circle.pen = rg.Pen('black', 1)
+
+circle.pen_down()
+circle.forward(1)
+for g in range(100):
+    for k in range(0, 628, 1):
+        i = math.cos(k/100)
+        j = math.sin(k/100)
+        circle.go_to(i, j)
+
+square = rg.SimpleTurtle()
+square.speed = 500000
+square.pen = rg.Pen('red', 1)
+colors = ['red', 'orange', 'yellow','green','blue','purple']
+
+for k in range(300):
+    for h in range(5):
+        for g in range(6):
+            square.pen = rg.Pen(colors[g], 1)
+            square.forward(3)
+    square.left(90)
+    square.pen_up()
+    square.forward(k)
+    square.pen_down()
+
+
+
+
