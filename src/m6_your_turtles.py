@@ -40,7 +40,7 @@ circle.pen = rg.Pen('black', 1)
 
 circle.pen_down()
 circle.forward(1)
-for g in range(1000):
+for g in range(1):
     circle.left(5)
     circle.forward(1)
 
