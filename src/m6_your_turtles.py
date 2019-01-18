@@ -40,9 +40,9 @@ circle.pen = rg.Pen('black', 1)
 
 circle.pen_down()
 circle.forward(1)
-for g in range(1):
+for g in range(500):
     circle.left(5)
-    circle.forward(1)
+    circle.forward(5)
 
 square = rg.SimpleTurtle()
 square.speed = 500000
